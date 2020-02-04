@@ -43,3 +43,22 @@ function Actsboard(name) {
     var viewTimerModel = new ViewCamera(timerModel, document.getElementById("root"));
     viewTimerModel.render();
 });
+
+// сумма
+
+let sum = (a, b) =>{
+    if(a = 0.1){
+        console.log('a = ' + a);
+    }else{
+        console.log('a != 0.1');
+    }
+     
+     a + b;
+
+}
+
+
+
+
+
+
