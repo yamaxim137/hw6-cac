@@ -1,8 +1,9 @@
-var [a, b] = [1, 2];
+// var [a, b] = [1, 2];
 
 let sum = (a=1, b=2) =>{
-    if(a == 0.1){
-        console.log('a = ' + a);
+    if(a == 0.1 & b == 0.2){
+        console.log(`a = ${a} и b = ${b}`);
+        console.log(`сумма = 0.3 !`);
     }else{
         console.log('a != 0.1');
     }
@@ -28,4 +29,5 @@ let devide = (a=1, b=2) =>{
     console.log(`частное = ${a / b} !`);
 
 }
+
 
