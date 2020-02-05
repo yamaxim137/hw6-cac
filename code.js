@@ -31,7 +31,7 @@ let devide = (a=1, b=2) =>{
 }
 
 // функция fcrt() создаёт кнопку
-let fcrt = (i) => {
+let fcrt = (i=1) => {
     let _i = i;
 var condicion = document.createElement("div");
     condicion.className = `cond c${ _i}`;
@@ -39,9 +39,9 @@ var condicion = document.createElement("div");
 var numBtn = document.createElement("Button");
 numBtn.type = "button";
 numBtn.className = "dec-temp";
-numBtn.innerHTML = "уменьшить температуру";
+numBtn.innerHTML = `${_i}`;
 numBtn.addEventListener('click', () => {   
-	alert('клик');
+	console.log(`rclick${_i}`);
     });
 
 	// this.stateChange(); // постоянная проверка состояния
@@ -51,6 +51,12 @@ condicion.appendChild(numBtn);
 rootDom = document.getElementById("root") 
 rootDom.appendChild(condicion); // обернули
 };
+
+let multi_fcrt = (max=3) => {
+    for (let i = 0; i < max; i++) {
+        fcrt(i);
+    }
+}
 
 
 let inpCh = () => {
