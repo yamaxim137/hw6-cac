@@ -30,4 +30,42 @@ let devide = (a=1, b=2) =>{
 
 }
 
+// функция fcrt() создаёт кнопку
+let fcrt = (i) => {
+    let _i = i;
+var condicion = document.createElement("div");
+    condicion.className = `cond c${ _i}`;
+    
+var numBtn = document.createElement("Button");
+numBtn.type = "button";
+numBtn.className = "dec-temp";
+numBtn.innerHTML = "уменьшить температуру";
+numBtn.addEventListener('click', () => {   
+	alert('клик');
+    });
+
+	// this.stateChange(); // постоянная проверка состояния
+
+condicion.appendChild(numBtn);
+
+rootDom = document.getElementById("root") 
+rootDom.appendChild(condicion); // обернули
+};
+
+
+let inpCh = () => {
+    displ = document.getElementById("i-display");
+    alert(`в инпуте: ${displ.value}`);
+};
+
+let m_is = () => {
+    document.addEventListener ('keydown', function (event){
+        console.log (event);
+    }); 
+    var evt = new KeyboardEvent('keydown', {'keyCode':13, 'which':13});
+    document.dispatchEvent(evt);
+}
+
+
+// создаём типовые кнопочки (цифры и кнопки + - * / = ,) 
 

@@ -1,0 +1,28 @@
+.op{
+    background-color: rgb(208, 255, 0);
+}
+
+.num{
+    background-color: rgb(0, 225, 255);
+}
+
+.container {
+    display: grid; /*| inline-grid | subgrid; */
+    grid-template-columns: repeat(5, 60px) auto;
+    grid-template-rows: repeat(3, 50px) 40px 40px auto;
+/* отступы */
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 2vw;
+    }
+#grid > div {
+    font-size: 5vw;
+    padding: .5em;
+    background: gold;
+    text-align: center;
+}

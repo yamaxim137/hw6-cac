@@ -1,0 +1,21 @@
+#displ {
+    background: rgb(0, 255, 170);
+    height: 10%;
+    width: 60%;
+    font-size: 5vw;
+    padding: .5em;
+}
+
+#grid { 
+    display: grid;
+    grid-template-rows: repeat(5, 1fr) 25%;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(5, 1fr) 20%;
+    grid-gap: 2vw;
+    }
+#grid > div {
+    font-size: 5vw;
+    padding: .5em;
+    background: gold;
+    text-align: center;
+}
