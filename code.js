@@ -33,12 +33,14 @@ let devide = (a=1, b=2) =>{
 // функция fcrt() создаёт кнопку
 let fcrt = (i=1) => {
     let _i = i;
-var condicion = document.createElement("div");
+var condicion = document.createElement("button");
+    condicion.display = "inline";
     condicion.className = `cond c${ _i}`;
     
 var numBtn = document.createElement("Button");
 numBtn.type = "button";
 numBtn.className = "dec-temp";
+numBtn.display = "inline";
 numBtn.innerHTML = `${_i}`;
 numBtn.addEventListener('click', () => {   
 	console.log(`rclick${_i}`);
@@ -58,10 +60,10 @@ let multi_fcrt = (max=3) => {
     }
 }
 
+let displ = document.getElementById("displ1");
 
 let inpCh = () => {
-    displ = document.getElementById("i-display");
-    alert(`в инпуте: ${displ.value}`);
+    console.log(`в инпуте: ${displ.value}`);
 };
 
 let m_is = () => {
@@ -71,7 +73,16 @@ let m_is = () => {
     var evt = new KeyboardEvent('keydown', {'keyCode':13, 'which':13});
     document.dispatchEvent(evt);
 }
+// при нажатии на кнопку "="
+let eq_ = () => {
+    spanTxt = document.getElementById("span-txt");
+    spanTxt.innerHTML = `нажато было только что '='!`;
+}
 
+// выводит на дисплей символ (добавляет)
+let inp = (s) => {
+    displ.value += s;
+}
 
 // создаём типовые кнопочки (цифры и кнопки + - * / = ,) 
 
