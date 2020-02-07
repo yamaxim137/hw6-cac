@@ -76,16 +76,20 @@ let m_is = () => {
 }
 // при нажатии на кнопку "="
 let eq_ = () => {
+    view_act(`=`);
+    inp('=');
+}
+
+let view_act = (text='') => {
     spanTxt = document.getElementById("span-txt");
-    spanTxt.innerHTML = `нажато было только что '='!`;
-    let displ = document.getElementById("displ");
-    displ.value += s;
+    spanTxt.innerHTML = text; //`нажато было только что '='!`;
 }
 
 // выводит на дисплей символ (добавляет)
-let inp = (s) => {
+let inp = (s='') => {
     let displ = document.getElementById("displ");
     displ.value += s;
+    view_act(s);
 }
 
 // создаём типовые кнопочки (цифры и кнопки + - * / = ,) 

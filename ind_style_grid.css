@@ -8,9 +8,9 @@
 
 #grid { 
     display: grid;
-    grid-template-rows: repeat(5, 1fr) 25%;
+    grid-template-rows: repeat(5, 17%); /* рядов */
     /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-columns: repeat(5, 1fr) 20%;
+    grid-template-columns: repeat(6, 12%); /* столбцов = колонок */
     grid-gap: 2vw;
     }
 #grid > div {
