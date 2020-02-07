@@ -60,10 +60,13 @@ let multi_fcrt = (max=3) => {
     }
 }
 
-let displ = document.getElementById("displ1");
+
+let state = 'Off';
+let displ = document.getElementById("displ");
+let spanTxt = document.getElementById("span-txt");
 
 let inpCh = () => {
-    let displ = document.getElementById("displ");
+    // let displ = document.getElementById("displ");
     console.log(`в инпуте: ${displ.value}`);
 };
 
@@ -76,16 +79,44 @@ let m_is = () => {
 }
 // при нажатии на кнопку "="
 let eq_ = () => {
-    spanTxt = document.getElementById("span-txt");
-    spanTxt.innerHTML = `нажато было только что '='!`;
-    let displ = document.getElementById("displ");
-    displ.value += s;
+    view_act(`=`);
+    inp('=');
+}
+
+// отображение текста в специальном месте 
+let view_act = (text='') => {
+    
+    spanTxt.innerHTML = text; //`нажато было только что '='!`;
 }
 
 // выводит на дисплей символ (добавляет)
-let inp = (s) => {
-    let displ = document.getElementById("displ");
-    displ.value += s;
+let inp = (s='') => {
+    view_act(s);
+    // let displ = document.getElementById("displ");
+    if(s == '='){ 
+        calculated(displ.value);
+        return
+    };
+    if(s == 'On/Off' | s == 'C'){       // проверка клавишь
+        if (s == 'On/Off') {
+            if (state == 'Off') {
+                state = 'On';           // включение
+                spanTxt.innerHTML += '  ...включаем .. )';
+            } else {
+                state = 'Off';          // отключение
+                spanTxt.innerHTML += '  ...отключаем ! )';
+            };
+        }
+        if (s == 'C') {
+            displ.value = '';
+        }
+    }else{displ.value += s;};
+}
+
+// чтение с дисплея и вычисления...
+
+let calculated = (p='-') => {
+    view_act(`вычисляем ${p}...`);
 }
 
 // создаём типовые кнопочки (цифры и кнопки + - * / = ,) 
