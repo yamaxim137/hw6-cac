@@ -1,84 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Caculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example</title>
+  <link rel="stylesheet" href="ind_style_grid.css">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 </head>
+
+
 <body>
-    <div id="root">
-    <h1>Caculator</h1>
-    <!-- <div id=”grid”>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-    </div> -->
-    <div id="d-display">
-    <input type="text" name="displ" id="i-display" onchange="inpCh()">
-    </div>
-    <div id="d-on_off">
-        <!-- <button id="b-on_off" onclick="on_off_func()">On/Off</button> -->
-        <button id="b-on_off" onclick="multi_fcrt(10)">On/Off</button>
-    </div>
-    <div id="operations">
-        <button id="b-plus" class="op" onclick="sum()">+</button>
-        <button id="b-plus" class="op" onclick="minus()">-</button>
-        <button id="b-plus" class="op" onclick="mult()">*</button>
-        <button id="b-plus" class="op" onclick="devide()">/</button>
-    </div>
-    <div id="numbers">
-        <div>
-            <button id="b-1" class="num" onclick="one()">1</button>
-            <button id="b-2" class="num" onclick="two()">2</button>
-            <button id="b-3" class="num" onclick="three()">3</button>
-        </div>
-        <div>
-            <button id="b-4" class="num" onclick="four()">4</button>
-            <button id="b-5" class="num" onclick="five()">5</button>
-            <button id="b-6" class="num" onclick="six()">6</button>
-        </div>
-        <div>
-            <button id="b-7" class="num" onclick="seven()">7</button>
-            <button id="b-8" class="num" onclick="eight()">8</button>
-            <button id="b-9" class="num" onclick="nine()">9</button>
-        </div>
-        <div>
-            <button id="b-," class="num" onclick="comma()">,</button>
-            <button id="b-0" class="num" onclick="zero()">0</button>
-            <button id="b-=" class="num" onclick="m_is()">=</button>
-        </div>
 
-
-        <div class="container">
-            <div class="item item-1">item-1</div>
-            <div class="item item-2">item-2</div>
-            <div class="item item-3">item-3</div>
-        </div>
-        
-
-        
-
-
-    </div>
-</div> 
-</body>
-<!-- <script src="./caculator.js"></script> -->
+<div id="displ1">
+  <h1>DISPLAY</h1>
+  <div id="span-txt"></div>
+</div>
+<input type="text" name="" id="displ">
+<div id="grid">
+  <div></div>
+  <div onclick="inp('1')">1</div>
+  <div onclick="inp('2')">2</div>
+  <div onclick="inp('3')">3</div>
+  <div onclick="inp('-')">-</div>
+  <div onclick="inp('On/Off')">On/Off</div>
+  <div></div>
+  <div onclick="inp('4')">4</div>
+  <div onclick="inp('5')">5</div>
+  <div onclick="inp('6')">6</div>
+  <div onclick="inp('+')">+</div>
+  <div onclick="inp('C')">C</div>
+  <div></div>
+  <div onclick="inp('7')">7</div>
+  <div onclick="inp('8')">8</div>
+  <div onclick="inp('9')">9</div>
+  <div onclick="inp('*')">*</div>
+  <div></div>
+  <div></div>
+  <div onclick="inp(',')">,</div>
+  <div onclick="inp('0')">0</div>
+  <div id="eq_" style="background: rgb(119, 0, 255)" onclick="eq_()">=</div>
+  <div onclick="inp('/')">/</div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+  
+<div>
+  <p><span id="ert"></span></p>
+</div>  
 <script src="./code.js"></script>
- 
-<!-- select>option[value="$"]*3 -->
-<!-- <select name="" id="">
-        <option value="1"></option>
-        <option value="2"></option>
-        <option value="3"></option>
-</select> -->
-
- </html>
-
+</body>
