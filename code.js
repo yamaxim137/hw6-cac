@@ -117,6 +117,19 @@ let inp = (s='') => {
 
 let calculated = (p='-') => {
     view_act(`вычисляем ${p}...`);
+    let operations_str = '+-*/%'
+    let operations_arr = operations_str.split('');
+    for (let ix = 0; ix < p.length; ix++) {
+        if (condition) {
+            
+        } else {
+            
+        };
+        
+    }
+
+    // пока простые действия ( с двумя числами )
+
 }
 
 // создаём типовые кнопочки (цифры и кнопки + - * / = ,) 
