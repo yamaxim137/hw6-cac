@@ -93,19 +93,30 @@ let view_act = (text='') => {
 let inp = (s='') => {
     view_act(s);
     // let displ = document.getElementById("displ");
-    
-    if(s == 'On/Off' | s == 'C'){ 
+    if(s == '='){ 
+        calculated(displ.value);
+        return
+    };
+    if(s == 'On/Off' | s == 'C'){       // проверка клавишь
         if (s == 'On/Off') {
             if (state == 'Off') {
-                state = 'On';
+                state = 'On';           // включение
                 spanTxt.innerHTML += '  ...включаем .. )';
             } else {
-                state = 'Off';
+                state = 'Off';          // отключение
                 spanTxt.innerHTML += '  ...отключаем ! )';
             };
         }
+        if (s == 'C') {
+            displ.value = '';
+        }
     }else{displ.value += s;};
-    
+}
+
+// чтение с дисплея и вычисления...
+
+let calculated = (p='-') => {
+    view_act(`вычисляем ${p}...`);
 }
 
 // создаём типовые кнопочки (цифры и кнопки + - * / = ,) 
