@@ -63,6 +63,7 @@ let multi_fcrt = (max=3) => {
 let displ = document.getElementById("displ1");
 
 let inpCh = () => {
+    let displ = document.getElementById("displ");
     console.log(`в инпуте: ${displ.value}`);
 };
 
@@ -77,10 +78,13 @@ let m_is = () => {
 let eq_ = () => {
     spanTxt = document.getElementById("span-txt");
     spanTxt.innerHTML = `нажато было только что '='!`;
+    let displ = document.getElementById("displ");
+    displ.value += s;
 }
 
 // выводит на дисплей символ (добавляет)
 let inp = (s) => {
+    let displ = document.getElementById("displ");
     displ.value += s;
 }
 
