@@ -60,10 +60,13 @@ let multi_fcrt = (max=3) => {
     }
 }
 
-let displ = document.getElementById("displ1");
+
+let state = 'Off';
+let displ = document.getElementById("displ");
+let spanTxt = document.getElementById("span-txt");
 
 let inpCh = () => {
-    let displ = document.getElementById("displ");
+    // let displ = document.getElementById("displ");
     console.log(`в инпуте: ${displ.value}`);
 };
 
@@ -80,16 +83,29 @@ let eq_ = () => {
     inp('=');
 }
 
+// отображение текста в специальном месте 
 let view_act = (text='') => {
-    spanTxt = document.getElementById("span-txt");
+    
     spanTxt.innerHTML = text; //`нажато было только что '='!`;
 }
 
 // выводит на дисплей символ (добавляет)
 let inp = (s='') => {
-    let displ = document.getElementById("displ");
-    displ.value += s;
     view_act(s);
+    // let displ = document.getElementById("displ");
+    
+    if(s == 'On/Off' | s == 'C'){ 
+        if (s == 'On/Off') {
+            if (state == 'Off') {
+                state = 'On';
+                spanTxt.innerHTML += '  ...включаем .. )';
+            } else {
+                state = 'Off';
+                spanTxt.innerHTML += '  ...отключаем ! )';
+            };
+        }
+    }else{displ.value += s;};
+    
 }
 
 // создаём типовые кнопочки (цифры и кнопки + - * / = ,) 
