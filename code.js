@@ -108,7 +108,28 @@ let inp = (s='') => {
 
 let calculated = (p='-') => {
     view_act(`вычисляем ${p}...`);
-    displ.value
+    let operations = '+-*/%';
+    let operations_arr = [];
+    let op = 0;
+    operations_arr = operations.split('');
+    for (let i = 0; i < operations_arr.length; i++) {
+        if (p.includes(operations_arr[i])){
+            var pp = [];
+            pp = p.split(operations_arr[i]);
+            console.log(pp);
+            console.log(`i=${i}`);
+            op=i;
+            break;
+        };
+    
+    }
+    console.log(`op=${op}`);
+
+    if(op==0){displ.value=+pp[0]+pp[1];}
+    if(op==1){displ.value=+pp[0]-pp[1];}
+    if(op==2){displ.value=+pp[0]*pp[1];}
+    if(op==3){displ.value=+pp[0]/pp[1];}
+    if(op==4){displ.value=+pp[0]%pp[1];}
 }
 
 // создаём типовые кнопочки (цифры и кнопки + - * / = ,) 
