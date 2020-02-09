@@ -9,25 +9,18 @@ let sum = (a=1, b=2) =>{
     }
      
     console.log(`сумма = ${a + b} !`);
-
 }
 
 let minus = (a=1, b=2) =>{
-         
     console.log(`разность = ${a - b} !`);
-
 }
 
 let mult = (a=1, b=2) =>{
-         
     console.log(`произведение = ${a * b} !`);
-
 }
 
 let devide = (a=1, b=2) =>{
-         
     console.log(`частное = ${a / b} !`);
-
 }
 
 // функция fcrt() создаёт кнопку
@@ -46,12 +39,10 @@ numBtn.addEventListener('click', () => {
 	console.log(`rclick${_i}`);
     });
 
-	// this.stateChange(); // постоянная проверка состояния
-
 condicion.appendChild(numBtn);
 
-rootDom = document.getElementById("root") 
-rootDom.appendChild(condicion); // обернули
+// rootDom = document.getElementById("root") 
+// rootDom.appendChild(condicion); // обернули
 };
 
 let multi_fcrt = (max=3) => {
@@ -117,6 +108,7 @@ let inp = (s='') => {
 
 let calculated = (p='-') => {
     view_act(`вычисляем ${p}...`);
+    displ.value
 }
 
 // создаём типовые кнопочки (цифры и кнопки + - * / = ,) 
