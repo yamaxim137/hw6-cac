@@ -125,7 +125,7 @@ let calculated = (p='-') => {
     }
     console.log(`op=${op}`);
 
-    if(op==0){displ.value=+pp[0]+pp[1];}
+    if(op==0){displ.value=Number(pp[0])+Number(pp[1]);}
     if(op==1){displ.value=+pp[0]-pp[1];}
     if(op==2){displ.value=+pp[0]*pp[1];}
     if(op==3){displ.value=+pp[0]/pp[1];}
