@@ -108,7 +108,7 @@ let inp = (s='') => {
 
 let calculated = (p='-') => {
     view_act(`вычисляем ${p}...`);
-    let operations = '+-*/%';
+    let operations = '+-*/%^sct';
     let operations_arr = [];
     let op = 0;
     operations_arr = operations.split('');
@@ -130,6 +130,10 @@ let calculated = (p='-') => {
     if(op==2){displ.value=+pp[0]*pp[1];}
     if(op==3){displ.value=+pp[0]/pp[1];}
     if(op==4){displ.value=+pp[0]%pp[1];}
+    if(op==5){displ.value=(+pp[0])**pp[1];}
+    if(op==6){displ.value=Math.sin(+pp[1]);}
+    if(op==7){displ.value=Math.cos(+pp[1]);}
+    if(op==8){displ.value=Math.tg(+pp[1]);}
 }
 
 // создаём типовые кнопочки (цифры и кнопки + - * / = ,) 
