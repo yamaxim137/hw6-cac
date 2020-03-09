@@ -4,22 +4,16 @@ let sum = (a=1, b=2) =>{
     if(a == 0.1 & b == 0.2){
         console.log(`a = ${a} и b = ${b}`);
         console.log(`сумма = 0.3 !`);
-    }else{
-        console.log('a != 0.1');
-    }
+    }else{console.log('a != 0.1');}
      
     console.log(`сумма = ${a + b} !`);
 }
 
-let minus = (a=1, b=2) =>{
-    console.log(`разность = ${a - b} !`);
-}
-
-let mult = (a=1, b=2) =>{
-    console.log(`произведение = ${a * b} !`);
-}
-
+let minus = (a=1, b=2) =>{console.log(`разность = ${a - b} !`);}
+let mult = (a=1, b=2) =>{console.log(`произведение = ${a * b} !`);}
 let devide = (a=1, b=2) =>{
+    // проверка деления на ноль
+    if(b===0){  ; return}
     console.log(`частное = ${a / b} !`);
 }
 
@@ -76,7 +70,6 @@ let eq_ = () => {
 
 // отображение текста в специальном месте 
 let view_act = (text='') => {
-    
     spanTxt.innerHTML = text; //`нажато было только что '='!`;
 }
 
@@ -88,6 +81,7 @@ let inp = (s='') => {
         calculated(displ.value);
         return
     };
+
     if(s == 'On/Off' | s == 'C'){       // проверка клавишь
         if (s == 'On/Off') {
             if (state == 'Off') {
@@ -98,9 +92,7 @@ let inp = (s='') => {
                 spanTxt.innerHTML += '  ...отключаем ! )';
             };
         }
-        if (s == 'C') {
-            displ.value = '';
-        }
+        if (s == 'C') {displ.value = '';}
     }else{displ.value += s;};
 }
 
