@@ -16,7 +16,7 @@
 #grid > div {
     font-size: 3vw;
     padding: .6em;
-    background: gold;
+    background: rgb(234, 0, 255);
     text-align: center;
 }
 
